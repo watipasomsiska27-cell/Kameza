@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kameza Lodge | Blantyre Malawi</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero{
+max-width:900px;
+animation:fadeIn 1.5s ease;
+}
+
+.hero h1{
+font-size:70px;
+margin-bottom:20px;
+font-weight:700;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.7;
+margin-bottom:30px;
+color:#e2e8f0;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#f59e0b;
+color:black;
+font-weight:600;
+text-decoration:none;
+border-radius:50px;
+transition:0.4s;
+margin:10px;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+background:white;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#f59e0b;
+}
+
+nav ul{
+display:flex;
+gap:25px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#f59e0b;
+}
+
+section{
+padding:100px 10%;
+}
+
+.section-title{
+font-size:42px;
+margin-bottom:50px;
+text-align:center;
+color:#f59e0b;
+}
+
+.rooms{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.room-card{
+background:#1e293b;
+border-radius:20px;
+overflow:hidden;
+transition:0.4s;
+}
+
+.room-card:hover{
+transform:translateY(-10px);
+}
+
+.room-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+}
+
+.room-content{
+padding:25px;
+}
+
+.room-content h3{
+margin-bottom:15px;
+font-size:28px;
+}
+
+.price{
+font-size:24px;
+color:#f59e0b;
+margin:15px 0;
+font-weight:700;
+}
+
+.status{
+display:inline-block;
+padding:8px 18px;
+border-radius:30px;
+font-size:14px;
+font-weight:600;
+margin-bottom:15px;
+}
+
+.available{
+background:#16a34a;
+}
+
+.booked{
+background:#dc2626;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.feature{
+background:#1e293b;
+padding:35px;
+border-radius:20px;
+text-align:center;
+transition:0.4s;
+}
+
+.feature:hover{
+transform:scale(1.05);
+}
+
+.feature h3{
+margin-top:20px;
+margin-bottom:15px;
+color:#f59e0b;
+}
+
+.booking{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+form{
+background:#1e293b;
+padding:40px;
+border-radius:20px;
+}
+
+form input,
+form select,
+form textarea{
+width:100%;
+padding:15px;
+margin-bottom:20px;
+border:none;
+border-radius:10px;
+background:#0f172a;
+color:white;
+}
+
+form button{
+width:100%;
+padding:15px;
+border:none;
+background:#f59e0b;
+font-size:18px;
+font-weight:600;
+border-radius:10px;
+cursor:pointer;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+margin:15px 0;
+font-size:18px;
+}
+
+footer{
+background:black;
+padding:40px;
+text-align:center;
+color:#94a3b8;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:45px;
+}
+
+.booking{
+grid-template-columns:1fr;
+}
+
+nav{
+padding:15px 5%;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Kameza Lodge</div>
+
+<ul>
+<li><a href="#rooms">Rooms</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#booking">Booking</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<header>
+
+<div class="hero">
+
+<h1>Luxury Comfort In Blantyre</h1>
+
+<p>
+Welcome to Kameza Lodge — your affordable and comfortable stay near
+Chileka Roundabout, Blantyre. Experience premium hospitality,
+secure accommodation, modern rooms and peaceful relaxation.
+</p>
+
+<a href="#booking" class="btn">Book A Stay</a>
+<a href="tel:+265888872097" class="btn">Call Reception</a>
+
+</div>
+
+</header>
+
+<section id="rooms">
+
+<h2 class="section-title">Our Rooms</h2>
+
+<div class="rooms">
+
+<div class="room-card">
+
+<img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=1200&auto=format&fit=crop">
+
+<div class="room-content">
+
+<span class="status available">Available</span>
+
+<h3>Standard Room</h3>
+
+<p>
+Comfortable budget-friendly room with TV, private bathroom,
+mosquito net and free parking.
+</p>
+
+<div class="price">MWK 35,000 / Night</div>
+
+<a href="#booking" class="btn">Reserve</a>
+
+</div>
+</div>
+
+<div class="room-card">
+
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1200&auto=format&fit=crop">
+
+<div class="room-content">
+
+<span class="status available">Available</span>
+
+<h3>Executive Room</h3>
+
+<p>
+Modern spacious room designed for business travelers and couples.
+</p>
+
+<div class="price">MWK 55,000 / Night</div>
+
+<a href="#booking" class="btn">Reserve</a>
+
+</div>
+</div>
+
+<div class="room-card">
+
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop">
+
+<div class="room-content">
+
+<span class="status booked">Fully Booked</span>
+
+<h3>VIP Suite</h3>
+
+<p>
+Premium luxury suite with lounge area, workspace and enhanced comfort.
+</p>
+
+<div class="price">MWK 85,000 / Night</div>
+
+<a href="#booking" class="btn">Join Waiting List</a>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="features">
+
+<h2 class="section-title">Lodge Features</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>24/7 Reception</h3>
+<p>Professional attendants available anytime.</p>
+</div>
+
+<div class="feature">
+<h3>Secure Parking</h3>
+<p>Large guarded parking space for guests.</p>
+</div>
+
+<div class="feature">
+<h3>Free WiFi</h3>
+<p>Fast internet connectivity around the lodge.</p>
+</div>
+
+<div class="feature">
+<h3>Room Service</h3>
+<p>Food delivery and housekeeping available.</p>
+</div>
+
+<div class="feature">
+<h3>Laundry Service</h3>
+<p>Quick washing and ironing services.</p>
+</div>
+
+<div class="feature">
+<h3>Conference Area</h3>
+<p>Meetings and small event hosting available.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="booking">
+
+<h2 class="section-title">Book Your Stay</h2>
+
+<div class="booking">
+
+<div>
+
+<h2 style="font-size:45px;margin-bottom:20px;">
+Relax In Comfort
+</h2>
+
+<p style="line-height:1.9;color:#cbd5e1;">
+Book rooms directly online, contact our reception team,
+or schedule assistance from our lodge attendants.
+Perfect for travelers, couples, business guests and tourists visiting Blantyre.
+</p>
+
+</div>
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<select required>
+<option>Select Room Type</option>
+<option>Standard Room</option>
+<option>Executive Room</option>
+<option>VIP Suite</option>
+</select>
+
+<input type="date" required>
+
+<input type="date" required>
+
+<textarea rows="5" placeholder="Additional Requests"></textarea>
+
+<button type="submit">Confirm Booking</button>
+
+</form>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact">
+
+<p>📍 Kameza / Chileka Roundabout, Blantyre, Malawi</p>
+
+<p>📞 +265 888 872 097</p>
+
+<p>✉️ reservations@kamezalodge.com</p>
+
+<p>🕒 Reception Open 24 Hours</p>
+
+<a class="btn"
+href="https://wa.me/265888872097">
+WhatsApp Reception
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Kameza Lodge — Blantyre Malawi.
+Premium Comfort & Hospitality.
+</p>
+
+</footer>
+
+</body>
+</html>
